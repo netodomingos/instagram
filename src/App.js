@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/CardFeed/Card';
 
-function App() {
+import Stories from './components/Stories/Stories';
+
+import { gerarNumeroRandomico } from './utils/randomNumber';
+
+function App() {   
+
+  const user = {
+    id: 1,
+    username: 'usuario1',
+    profileImage: `https://picsum.photos/${gerarNumeroRandomico()}`,
+    viewed: false,
+  };
+
+  const cardData = {
+    user,
+    imageUrl: `https://picsum.photos/${gerarNumeroRandomico()}`,
+    likes: 42,
+    comments: [
+      { id: 1, user: 'flt_123', comment: 'mto massa' },
+      { id: 2, user: 'usr_14', comment: 'gostei mto' },
+      { id: 3, user: 'gemerson', comment: 'achei ruim' },
+      { id: 4, user: 'sla', comment: 'horroroso' }
+    ],
+    publishAt: '2 d'
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Stories />
+     <Card {...cardData}/>
     </div>
   );
 }

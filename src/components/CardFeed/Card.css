@@ -1,0 +1,111 @@
+.card-container {
+    border: 1px solid #e0e0e0;
+    width: 450px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .first-div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .like-button,
+  .comment-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button.liked {
+    color: red; /* Cor para indicar que o usuário curtiu */
+  }
+  
+  .comments {
+    padding: 0 16px;
+    margin-bottom: 10px;
+  }
+
+  .comment{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    height: 20px;
+  }
+
+  .comment p {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  .comments p {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    padding: 16px;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 20px;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3897f0;
+    font-weight: bold;
+  }
+  
