@@ -58,8 +58,8 @@
     align-items: center;
   }
   
-  .like-button.liked {
-    color: red; /* Cor para indicar que o usuário curtiu */
+  .like-button .liked {
+    color: #FF0000; /* Cor para indicar que o usuário curtiu */
   }
   
   .comments {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Card.css';
 
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
-import { FaRegHeart } from "react-icons/fa"
+import { FaRegHeart, FaHeart } from "react-icons/fa"
 import { BiBookmark } from "react-icons/bi";
 import { FaRegComment } from "react-icons/fa6";
 import { TbSend } from "react-icons/tb";
@@ -41,10 +41,16 @@ const Card = ({ user, imageUrl, likes, comments, publishAt }) => {
       <img className="card-image" src={imageUrl} alt="Imagem do Card" />
       <div className="card-actions">
         <div className='card-icons'>
-            <button >
-                <FaRegHeart size={25} color='#000'/>
+            <button onClick={() => toggleLike()}>
+              {
+                liked === true ? (
+                  <FaHeart size={25} color='#ff0000'/> 
+                ) : (
+                  <FaRegHeart size={25} color='#000'  />
+                ) 
+              }
             </button>
-            <button >
+            <button>
                 <FaRegComment  size={25} color='#000'/>
             </button>
             <button >
@@ -58,7 +64,7 @@ const Card = ({ user, imageUrl, likes, comments, publishAt }) => {
         </div>
       </div>
       <div className="comments">
-        <p>{likes} curtidas</p>
+        <p>{likes + (liked === true ? 1 : 0)} curtidas</p>
         {
           comments.map(items => (
             <div key={items.id} className='comment'>

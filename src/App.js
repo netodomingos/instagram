@@ -6,7 +6,6 @@ import Stories from './components/Stories/Stories';
 import { gerarNumeroRandomico } from './utils/randomNumber';
 
 function App() {   
-
   const user = {
     id: 1,
     username: 'usuario1',
@@ -26,7 +25,6 @@ function App() {
     ],
     publishAt: '2 d'
   };
-
 
   return (
     <div className="App">
